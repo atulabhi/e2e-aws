@@ -71,7 +71,7 @@ task_delimiter;
 
 echo "Running the litmus test.."
 
-## Create the litmus job for percona app chaos test: openebs-volume-replica-failure
+## Create the litmus job for percona-jiva app chaos test: openebs-volume-replica-failure
 
 jobNameCmd="kubectl get jobs -n litmus --no-headers -o jsonpath='{.items[?(@.metadata.labels.name==\"openebs-volume-replica-failure\")].metadata.name}'"
 

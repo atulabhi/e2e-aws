@@ -88,7 +88,7 @@ sed -i -e 's/''name=percona''/''app=jenkins-app''/g' \
 
 echo "Running the litmus test.."
 
-## Create the litmus job for percona app chaos test: openebs_replica_network_delay
+## Create the litmus job for jenkins app chaos test: openebs_replica_network_delay
 
 jobNameCmd="kubectl get jobs -n litmus --no-headers -o jsonpath='{.items[?(@.metadata.labels.name==\"openebs-replica-network\")].metadata.name}'"
 

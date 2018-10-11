@@ -8,7 +8,7 @@ set -x
 ## TODO: Ideally, run_metadata should be passed as gitlab runner (CI runtime) ENV
 run_metadata=""
 
-## https://github
+## https://github.com/openebs/litmus/blob/master/apps/jenkins/deployers/test_vars.yml 
 test_name="jenkins-deployment" 
 
 if [[ -n "$run_metadata" ]]; then

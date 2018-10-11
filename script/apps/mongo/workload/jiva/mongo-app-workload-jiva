@@ -8,7 +8,7 @@ set -x
 ## TODO: Ideally, run_metadata should be passed as gitlab runner (CI runtime) ENV
 run_metadata=""
 
-## https://github.com/openebs/litmus/blob/master/apps/percona/deployers/test_vars.yml
+## https://github.com/openebs/litmus/blob/master/apps/mongodb/workload/test_vars.yml
 test_name="mongodb-loadgen" 
 
 if [[ -n "$run_metadata" ]]; then
@@ -71,7 +71,7 @@ task_delimiter;
 
 echo "Running the litmus test.."
 
-## Create the litmus job for percona app deploy
+## Create the litmus job for mongo workload 
 
 jobNameCmd="kubectl get jobs -n litmus --no-headers -o jsonpath='{.items[?(@.metadata.labels.loadgen==\"mongodb-loadjob\")].metadata.name}'"
 

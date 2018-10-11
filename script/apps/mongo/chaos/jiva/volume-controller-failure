@@ -89,7 +89,7 @@ sed -i -e 's/''name=percona''/''app=mongo''/g' \
 
 echo "Running the litmus test.."
 
-## Create the litmus job for percona app chaos test: openebs-target-failure
+## Create the litmus job for mongo app chaos test: openebs-target-failure
 
 jobNameCmd="kubectl get jobs -n litmus --no-headers -o jsonpath='{.items[?(@.metadata.labels.name==\"openebs-target-failure\")].metadata.name}'"
 

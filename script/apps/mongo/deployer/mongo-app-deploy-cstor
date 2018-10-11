@@ -8,7 +8,7 @@ set -x
 ## TODO: Ideally, run_metadata should be passed as gitlab runner (CI runtime) ENV
 run_metadata="cstor"
 
-## https://github.com/openebs/litmus/blob/master/apps/percona/deployers/test_vars.yml
+## https://github.com/openebs/litmus/blob/master/apps/mongodb/deployers/test_vars.yml
 test_name="mongodb-deployment" 
 
 if [[ -n "$run_metadata" ]]; then
@@ -92,7 +92,7 @@ sed -i '/command:/i \
 
 echo "Running the litmus test.."
 
-## Create the litmus job for percona app deploy with cstor storage class
+## Create the litmus job for mongo app deploy with cstor storage class
 
 jobNameCmd="kubectl get jobs -n litmus --no-headers -o jsonpath='{.items[?(@.metadata.labels.app==\"mongodb-deployment-cstor\")].metadata.name}'"
 

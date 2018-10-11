@@ -8,7 +8,7 @@ set -x
 ## TODO: Ideally, run_metadata should be passed as gitlab runner (CI runtime) ENV
 run_metadata=""
 
-## https://github.com/openebs/litmus/blob/master/apps/percona/chaos/openebs-replica-network-delay/test_vars.yml
+## https://github.com/openebs/litmus/blob/master/apps/cassandra/functional/scale_replicas/test_vars.yml 
 test_name="scale-app-replicas" 
 
 if [[ -n "$run_metadata" ]]; then

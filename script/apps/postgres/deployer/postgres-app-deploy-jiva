@@ -71,7 +71,7 @@ task_delimiter;
 
 echo "Running the litmus test.."
 
-## Create the litmus job for postgres app deploy
+## Create the litmus job for postgres-jiva app deploy
 
 jobNameCmd="kubectl get jobs -n litmus --no-headers -o jsonpath='{.items[?(@.metadata.labels.app==\"postgres-deployment-litmus\")].metadata.name}'"
 

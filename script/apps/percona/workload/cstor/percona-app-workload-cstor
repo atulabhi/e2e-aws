@@ -8,7 +8,7 @@ set -x
 ## TODO: Ideally, run_metadata should be passed as gitlab runner (CI runtime) ENV
 run_metadata="cstor"
 
-https://github.com/openebs/litmus/blob/master/apps/percona/workload/test_vars.yml
+## https://github.com/openebs/litmus/blob/master/apps/percona/workload/test_vars.yml
 test_name="percona-loadgen" 
 
 if [[ -n "$run_metadata" ]]; then
@@ -93,7 +93,7 @@ sed -i '/command:/i \
 
 echo "Running the litmus test.."
 
-## Create the litmus job for percona app deploy
+## Create the litmus job for percona-cstor app loadgen
 
 jobNameCmd="kubectl get jobs -n litmus --no-headers -o jsonpath='{.items[?(@.metadata.labels.loadgen==\"percona-loadjob-cstor\")].metadata.name}'"
 

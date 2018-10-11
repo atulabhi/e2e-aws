@@ -87,7 +87,7 @@ sed -i -e 's/''name=percona''/''app=pgset''/g' \
 
 echo "Running the litmus test.."
 
-## Create the litmus job for percona app chaos test: openebs-target-network-delay
+## Create the litmus job for postgres app chaos test: openebs-target-network-delay
 
 jobNameCmd="kubectl get jobs -n litmus --no-headers -o jsonpath='{.items[?(@.metadata.labels.name==\"openebs-target-network-delay\")].metadata.name}'"
 
